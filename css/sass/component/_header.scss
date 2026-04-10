@@ -1,0 +1,208 @@
+body {
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+}
+.main-header {
+  position: absolute;
+  top: 30px;
+  inset-inline-start: 30px;
+  width: calc(100% - 64px);
+  z-index: 5;
+
+  @include xs {
+    inset-inline-start: 15px;
+    width: calc(100% - 30px);
+    top: 15px;
+  }
+}
+.header {
+  background: #ffffff33;
+  // background-color: black;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 83px;
+  gap: 15px;
+  @include md {
+    padding: 0 18px;
+    height: 73px;
+  }
+  @include sm {
+    justify-content: flex-start;
+  }
+  @include xs {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px;
+    gap: 8px;
+  }
+  .menu-btn {
+    display: none;
+    @include sm {
+      display: flex;
+      margin-inline-end: 10px;
+      z-index: 113;
+      font-size: 24px;
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      .active & {
+        color: #fff;
+        .las {
+          &::before {
+            content: "\f00d";
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    height: 58px;
+    z-index: 111;
+    aspect-ratio: 207/58;
+    @include md {
+      height: 38px;
+    }
+    @include xs {
+      height: 32px;
+    }
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    inset-inline-start: -100vw;
+    width: 100vw;
+    background-color: $setting_primary_color;
+    opacity: 98%;
+    z-index: 101;
+    transition: all 0.5s ease-in-out;
+    @include sm {
+      display: flex;
+    }
+    .active & {
+      inset-inline-start: 0;
+    }
+  }
+  .main-nav {
+    @include sm {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 102;
+      inset-inline-start: 0;
+      inset-inline-start: -100vw;
+      padding: 180px 0 40px;
+      transition: all 0.5s ease-in-out;
+      .active & {
+        inset-inline-start: 0;
+      }
+    }
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      @include sm {
+        flex-direction: column;
+        gap: 25px;
+        li {
+          color: #fff;
+        }
+      }
+      .nav-item {
+        color: #fff;
+        font-size: 16px;
+        font-weight: $weight_medium;
+        @include md {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .lang-plus-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    @include md {
+      gap: 10px;
+    }
+    @include sm {
+      position: absolute;
+      inset-inline-end: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 102;
+    }
+    @include xs {
+      width: 100%;
+      position: unset;
+      inset-inline-end: unset;
+      top: unset;
+      transform: unset;
+    }
+    .lang-cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      z-index: 96;
+      @include sm {
+        position: relative;
+        // margin-inline-start: auto;
+        z-index: 116;
+      }
+      @include xs {
+        top: 20px;
+        inset-inline-end: 15px;
+        position: absolute;
+      }
+
+      .lang-link {
+        text-decoration: underline;
+        color: #fff;
+        line-height: 24px;
+        .active & {
+          color: #fff;
+        }
+      }
+      .las {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+    .start-btn {
+      background-color: $setting_primary_color;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 1px solid #ffffff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: $weight_bold;
+      transition: all 0.5s ease-in-out;
+      @include md {
+        padding: 14px;
+        font-size: 14px;
+        height: 36px;
+      }
+      @include xs {
+        height: 34px;
+        font-size: 12px;
+        padding: 0 10px;
+      }
+      .active & {
+        color: $setting_primary_color;
+        background-color: #fff;
+      }
+    }
+  }
+}

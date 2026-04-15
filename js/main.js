@@ -228,3 +228,62 @@ if (document.querySelector(".tabs") !== null) {
     console.log(button);
   });
 }
+
+var servicesSwiper = new Swiper(".services-archive .services-Swiper", {
+  pagination: {
+    el: ".services-archive .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".services-archive .swiper-button-next",
+    prevEl: ".services-archive .swiper-button-prev",
+  },
+});
+
+/* سلايدر الصور الصغيرة */
+const thumbs = new Swiper(".thumbSwiper", {
+  slidesPerView: 5,
+  spaceBetween: 19,
+  watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      spaceBetween: 10, // تحت 500 (وأي حاجة أقل)
+    },
+    500: {
+      spaceBetween: 20, // من 500 وفوق
+    },
+  },
+});
+
+/* السلايدر الرئيسي */
+const service = new Swiper(".serviceSwiper", {
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".serviceSwiper .swiper-button-next",
+    prevEl: ".serviceSwiper .swiper-button-prev",
+  },
+
+  thumbs: {
+    swiper: thumbs,
+  },
+});
+
+var clientsSwiper = new Swiper(".clients-archive .clients-Swiper", {
+  pagination: {
+    el: ".clients-archive .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".clients-archive .swiper-button-next",
+    prevEl: ".clients-archive .swiper-button-prev",
+  },
+});

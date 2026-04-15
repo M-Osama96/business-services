@@ -1,0 +1,57 @@
+.breadcrumb {
+  position: relative;
+  z-index: 4;
+  max-width: 1440px;
+  margin: auto;
+  aspect-ratio: 1440/279;
+  overflow: hidden;
+  @include sm {
+    aspect-ratio: 1440/400;
+  }
+  @include xs {
+    aspect-ratio: 1440/600;
+  }
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    @include xs {
+      aspect-ratio: 1;
+    }
+    .img-cover {
+      display: flex;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(darken($setting_primary_color, 30%), 0.64);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    z-index: 2;
+  }
+  .page-title {
+    position: absolute;
+    inset-inline-end: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    z-index: 6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: #fff;
+    font-size: 32px;
+    font-weight: $weight_bold;
+    @include sm {
+      font-size: 22px;
+    }
+    @include ltr {
+      transform: translateX(50%);
+    }
+  }
+}

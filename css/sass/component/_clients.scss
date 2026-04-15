@@ -56,6 +56,11 @@
       .clients-img {
         width: calc(16.6% - 17px);
         aspect-ratio: 147/69;
+        border: 2px solid transparent;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          border-color: #000;
+        }
         @include sm {
           width: calc(20% - 8px);
         }

@@ -1,0 +1,222 @@
+.packages-archive {
+  padding-top: 70px;
+  @include sm {
+    padding-top: 30px;
+  }
+  .packages-cont {
+    margin-bottom: 88px;
+    .packages-title {
+      font-size: 40px;
+      font-weight: $weight_bold;
+      color: darken($setting_primary_color, $amount: 25%);
+      margin-bottom: 32px;
+      clip-path: polygon(50% 0%, 100% 80%, 100% 100%, 0 100%, 0% 80%);
+      background-color: lighten($setting_text_color, $amount: 65%);
+      width: 100%;
+      padding: 32px;
+      text-align: center;
+      @include sm {
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding: 35px 10px 10px;
+      }
+    }
+    .packages-flex {
+      display: flex;
+      gap: 20px;
+      @include sm {
+        gap: 12px;
+      }
+      @include xs {
+        flex-wrap: wrap;
+      }
+      .package {
+        background-color: lighten($setting_text_color, $amount: 65%);
+        padding: 1px;
+        height: fit-content;
+        width: calc(33% - 8px);
+        transition: all 0.4s ease-in-out;
+        @include sm {
+          width: calc(33% - 6px);
+        }
+        @include xs {
+          width: 100%;
+        }
+        &:hover {
+          background-color: $setting_primary_color;
+          .inner-package {
+            .info {
+              background-color: lighten($setting_primary_color, $amount: 50%);
+              .price {
+                .numb {
+                  color: $setting_primary_color;
+                }
+              }
+            }
+          }
+        }
+        .inner-package {
+          background-color: #fff;
+          padding: 20px 20px 50px;
+          @include sm {
+            padding: 10px 10px 40px;
+          }
+          @include xs {
+            padding: 10px 10px 20px;
+          }
+          .info {
+            background-color: lighten($setting_text_color, $amount: 65%);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.4s ease-in-out;
+            @include sm {
+              padding: 10px;
+              margin-bottom: 12px;
+            }
+            .package-title {
+              border: 1px solid #ffffff;
+              background-color: lighten($setting_primary_color, $amount: 55%);
+              width: fit-content;
+              padding: 4px;
+              font-size: 14px;
+              font-weight: $weight_medium;
+              color: darken($setting_primary_color, $amount: 30%);
+              margin-bottom: 16px;
+              @include sm {
+                font-size: 12px;
+              }
+            }
+            .price {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              .numb {
+                font-size: 48px;
+                font-weight: $weight_bold;
+                color: #000;
+                transition: all 0.4s ease-in-out;
+                @include sm {
+                  font-size: 28px;
+                }
+              }
+              .currency {
+                font-size: 18px;
+                font-weight: $weight_bold;
+                color: darken($setting_primary_color, $amount: 30%);
+                @include sm {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .package-details {
+            padding: 0 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            overflow: hidden;
+            max-height: 322px;
+            @include md {
+              max-height: 305px;
+            }
+            @include sm {
+              padding: 0;
+              max-height: 288px;
+            }
+            .details-item {
+              display: flex;
+              align-items: start;
+              gap: 8px;
+              .dot {
+                color: $setting_text_color;
+                font-size: 25px;
+                margin-top: -10px;
+              }
+              .item-p {
+                color: $setting_text_color;
+                font-size: 18px;
+                font-weight: $weight_light;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                max-height: 51px;
+                @include md {
+                  font-size: 16px;
+                  max-height: 45px;
+                }
+                @include sm {
+                  font-size: 12px;
+                  max-height: 34px;
+                }
+              }
+            }
+          }
+          .knowus-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            z-index: 5;
+            @include xs {
+              bottom: 10px;
+            }
+            .btn-text {
+              font-size: 18px;
+              color: $setting_primary_color;
+              font-weight: $weight_bold;
+              padding: 0 34px;
+              @include sm {
+                padding: 0 15px;
+              }
+              @include xs {
+                font-size: 16px;
+                padding: 0;
+              }
+            }
+            .btn-arrow {
+              width: 100%;
+              height: 20px;
+              background-color: #fff;
+              clip-path: polygon(0 0, 50% 100%, 100% 0);
+              position: relative;
+              transition: all 0.4s ease-in-out;
+              max-width: 176px;
+              &::after {
+                content: "";
+                position: absolute;
+                inset-inline-start: 4px;
+                top: 2px;
+                width: calc(100% - 8px);
+                height: calc(100% - 4px);
+                clip-path: polygon(0 0, 50% 100%, 100% 0);
+                background-color: $setting_primary_color;
+                transform: translateY(-1px);
+                transition: all 0.4s ease-in-out;
+              }
+            }
+            &:hover {
+              .btn-arrow {
+                transform: translateY(4px);
+                &::after {
+                  background-color: darken(
+                    $setting_primary_color,
+                    $amount: 20%
+                  );
+                  transform: translateY(1px);
+                  height: calc(100% - 6px);
+                  width: calc(100% - 20px);
+                  inset-inline-start: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -37,6 +37,7 @@ body {
     height: auto;
     padding: 15px;
     gap: 8px;
+    height: 62px;
   }
   .menu-btn {
     display: none;
@@ -198,10 +199,19 @@ body {
         height: 34px;
         font-size: 12px;
         padding: 0 10px;
+        transform: translateX(100vw);
+        margin-top: 40px;
+        @include ltr {
+          transform: translateX(-100vw);
+        }
       }
       .active & {
         color: $setting_primary_color;
         background-color: #fff;
+        transform: translateX(0);
+        @include ltr {
+          transform: translateX(0);
+        }
       }
     }
   }

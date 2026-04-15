@@ -1,0 +1,135 @@
+.package-single {
+  padding: 117px 0 80px;
+  @include sm {
+    padding: 50px 0 30px;
+  }
+  .package-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 831px;
+    margin: auto;
+    .info {
+      background-color: lighten($setting_text_color, $amount: 65%);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: all 0.4s ease-in-out;
+      @include sm {
+        padding: 10px;
+        margin-bottom: 12px;
+      }
+      .package-title {
+        border: 1px solid #ffffff;
+        background-color: lighten($setting_primary_color, $amount: 55%);
+        width: fit-content;
+        padding: 4px;
+        font-size: 14px;
+        font-weight: $weight_medium;
+        color: darken($setting_primary_color, $amount: 30%);
+        margin-bottom: 16px;
+        @include sm {
+          font-size: 12px;
+        }
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .numb {
+          font-size: 48px;
+          font-weight: $weight_bold;
+          color: #000;
+          transition: all 0.4s ease-in-out;
+          @include sm {
+            font-size: 28px;
+          }
+        }
+        .currency {
+          font-size: 18px;
+          font-weight: $weight_bold;
+          color: darken($setting_primary_color, $amount: 30%);
+          @include sm {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .package-details {
+      padding: 0 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      overflow: hidden;
+      max-height: 322px;
+      max-width: 629px;
+      @include md {
+        max-height: 305px;
+      }
+      @include sm {
+        padding: 0;
+        max-height: 288px;
+      }
+      .details-item {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+
+        .dot {
+          color: $setting_text_color;
+          font-size: 25px;
+          margin-top: -10px;
+        }
+        .item-p {
+          color: $setting_text_color;
+          font-size: 18px;
+          font-weight: $weight_light;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          max-height: 51px;
+          @include md {
+            font-size: 16px;
+            max-height: 45px;
+          }
+          @include sm {
+            font-size: 12px;
+            max-height: 34px;
+          }
+        }
+      }
+    }
+    .desc {
+      color: darken($setting_text_color, $amount: 30%);
+      font-size: 18px;
+      font-weight: $weight_light;
+      line-height: 1.8;
+      margin: 0;
+      @include md {
+        font-size: 16px;
+      }
+      @include sm {
+        font-size: 12px;
+      }
+    }
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 100%;
+      color: #fff;
+      background-color: $setting_primary_color;
+      font-size: 16px;
+      font-weight: $weight_bold;
+      border: 2px solid $setting_primary_color;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-color: transparent;
+        color: $setting_primary_color;
+      }
+    }
+  }
+}

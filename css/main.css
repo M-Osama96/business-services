@@ -4710,4 +4710,256 @@ html[dir=ltr] .clients-archive .swiper-footer .swiper-button-prev {
 .package-single .package-cont .contact-btn:hover {
   background-color: transparent;
   color: #c60f8e;
+}
+
+.testi-archive {
+  margin: 70px 0;
+  background: linear-gradient(180deg, #ffffff 0%, rgb(253.1197183099, 230.1802816901, 246.1) 60%, #ffffff 100%);
+}
+@media (max-width: 991px) {
+  .testi-archive {
+    margin: 30px 0;
+  }
+}
+.testi-archive .testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .testi-archive .testi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .testi-archive .testi-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+.testi-archive .testi-grid .testi-item {
+  position: relative;
+  height: 100%;
+  padding: 23px 17px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 47px;
+}
+@media (max-width: 1199px) {
+  .testi-archive .testi-grid .testi-item {
+    padding: 14px;
+  }
+}
+.testi-archive .testi-grid .testi-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 78% 100%, 78% 72%, 0 72%);
+  background-color: #fff;
+}
+html[dir=ltr] .testi-archive .testi-grid .testi-item::before {
+  transform: scalex(-1);
+}
+.testi-archive .testi-grid .testi-item .testi-text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #454545;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 175px;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 1199px) {
+  .testi-archive .testi-grid .testi-item .testi-text {
+    font-size: 16px;
+    max-height: 157px;
+  }
+}
+.testi-archive .testi-grid .testi-item .cott {
+  color: rgb(250.2464788732, 192.2535211268, 232.5);
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 1199px) {
+  .testi-archive .testi-grid .testi-item .cott .cot-svg {
+    width: 40px;
+  }
+}
+.testi-archive .testi-grid .testi-item .profile {
+  position: absolute;
+  inset-inline-end: 0;
+  bottom: 0;
+  width: 75%;
+  height: 25%;
+  background-color: #ffffff;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 11px 11px 0px;
+}
+html[dir=ltr] .testi-archive .testi-grid .testi-item .profile {
+  padding: 11px 0 11px 11px;
+}
+.testi-archive .testi-grid .testi-item .profile .profile-img {
+  aspect-ratio: 1;
+  height: 100%;
+}
+.testi-archive .testi-grid .testi-item .profile .profile-info .name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 22.5px;
+}
+.testi-archive .testi-grid .testi-item .profile .profile-info .desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #454545;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 22.5px;
+}
+@media (max-width: 1199px) {
+  .testi-archive .testi-grid .testi-item .profile .profile-info .desc {
+    font-size: 12px;
+  }
+}
+.testi-archive .swiper-footer {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 7px;
+  margin: 48px auto 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 56px;
+}
+@media (max-width: 991px) {
+  .testi-archive .swiper-footer {
+    margin: 20px auto 0;
+  }
+}
+.testi-archive .swiper-footer .swiper-pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  bottom: 0;
+}
+.testi-archive .swiper-footer .swiper-pagination .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid rgb(252.0422535211, 215.9577464789, 241);
+  width: 35px;
+  height: 35px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  color: #787878;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.testi-archive .swiper-footer .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #c60f8e;
+  color: #fff;
+}
+.testi-archive .swiper-footer .swiper-button-next,
+.testi-archive .swiper-footer .swiper-button-prev {
+  position: relative;
+  width: auto;
+  left: unset;
+  top: unset;
+  right: unset;
+  bottom: unset;
+  width: 35px;
+  height: 35px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c60f8e;
+  color: #c60f8e;
+}
+.testi-archive .swiper-footer .swiper-button-next {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.testi-archive .swiper-footer .swiper-button-next::after {
+  font-size: 16px;
+  content: "\f100";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+}
+.testi-archive .swiper-footer .swiper-button-next::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  inset-inline-end: 1;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  background-color: rgb(252.0422535211, 215.9577464789, 241);
+  z-index: -1;
+}
+html[dir=ltr] .testi-archive .swiper-footer .swiper-button-next {
+  transform: scale(-1);
+}
+.testi-archive .swiper-footer .swiper-button-prev {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.testi-archive .swiper-footer .swiper-button-prev::after {
+  font-size: 16px;
+  content: "\f101";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+}
+.testi-archive .swiper-footer .swiper-button-prev::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  inset-inline-start: 1;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  background-color: rgb(252.0422535211, 215.9577464789, 241);
+  z-index: -1;
+}
+html[dir=ltr] .testi-archive .swiper-footer .swiper-button-prev {
+  transform: scale(-1);
+}
+.testi-archive .swiper-footer .swiper-button-disabled {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

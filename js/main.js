@@ -287,3 +287,17 @@ var clientsSwiper = new Swiper(".clients-archive .clients-Swiper", {
     prevEl: ".clients-archive .swiper-button-prev",
   },
 });
+var testiSwiper = new Swiper(".testi-archive .testi-Swiper", {
+  pagination: {
+    el: ".testi-archive .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".testi-archive .swiper-button-next",
+    prevEl: ".testi-archive .swiper-button-prev",
+  },
+});

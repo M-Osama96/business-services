@@ -301,3 +301,17 @@ var testiSwiper = new Swiper(".testi-archive .testi-Swiper", {
     prevEl: ".testi-archive .swiper-button-prev",
   },
 });
+var newsarchiveSwiper = new Swiper(".news-archive .news-Swiper", {
+  pagination: {
+    el: ".news-archive .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".news-archive .swiper-button-next",
+    prevEl: ".news-archive .swiper-button-prev",
+  },
+});

@@ -6,6 +6,12 @@
   .tabs {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    .faq-single & {
+      gap: 50px;
+      @include sm {
+        gap: 20px;
+      }
+    }
     @include xs {
       grid-template-columns: 1fr;
     }
@@ -25,6 +31,12 @@
         padding: 20px 20px 20px 0;
         @include ltr {
           padding: 20px 0 20px 20px;
+        }
+      }
+      .faq-single & {
+        padding: 0;
+        @include ltr {
+          padding: 0;
         }
       }
       .Q-bg {
@@ -66,6 +78,10 @@
           );
           padding: 0;
           transition: all 0.3s ease-in-out;
+          .faq-single & {
+            background-color: darken($setting_primary_color, 25%);
+            overflow: hidden;
+          }
           .ques {
             transition: all 0.3s ease-in-out;
             position: relative;
@@ -90,9 +106,29 @@
               font-size: 12px;
               padding: 8px;
             }
+            .faq-single & {
+              background-color: transparent;
+              @include md {
+                font-size: 14px;
+              }
+              @include sm {
+                font-size: 12px;
+              }
+            }
           }
           &[aria-selected="true"] {
             background-color: $setting_primary_color;
+            .faq-single & {
+              background-color: darken($setting_primary_color, 25%);
+              .ques {
+                background-color: $setting_primary_color;
+                color: #fff;
+                padding: 30px 20px;
+                @include sm {
+                  padding: 20px 10px;
+                }
+              }
+            }
             .ques {
               padding: 30px 20px 30px 30px;
               background-color: #fff;
@@ -121,6 +157,23 @@
       border: 4px solid $setting_primary_color;
       @include md {
         padding: 30px;
+      }
+      .faq-single & {
+        padding: 0;
+        border: none;
+        position: relative;
+        .faq-A-inner {
+          padding: 44px 54px;
+          border: 4px solid $setting_primary_color;
+          position: sticky;
+          top: 50px;
+          @include md {
+            padding: 30px;
+          }
+          @include xs {
+            // position: unset;
+          }
+        }
       }
       .A-title {
         font-size: 40px;

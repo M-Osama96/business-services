@@ -223,7 +223,7 @@ iframe {
 }
 
 body {
-  max-width: 1440px;
+  max-width: 1640px;
   margin: auto;
   position: relative;
 }
@@ -473,7 +473,6 @@ html[dir=ltr] .active .header .lang-plus-btn .start-btn {
 .hero {
   position: relative;
   z-index: 4;
-  max-width: 1440px;
   margin: auto;
 }
 .hero .heroSwiper .hero-item {
@@ -931,7 +930,6 @@ html[dir=ltr] .hero .heroSwiper .prev-btn .inner-btn {
   margin: 70px 0;
   position: relative;
   overflow: hidden;
-  max-width: 1440px;
   margin: auto;
 }
 @media (max-width: 991px) {
@@ -3446,7 +3444,6 @@ html[dir=ltr] .faq .tabs .faq-Q .faq-tablist [role=tab][aria-selected=true] .que
 .breadcrumb {
   position: relative;
   z-index: 4;
-  max-width: 1440px;
   margin: auto;
   aspect-ratio: 1440/279;
   overflow: hidden;
@@ -5388,4 +5385,282 @@ html[dir=ltr] .news-archive .swiper-footer .swiper-button-prev {
   .news-single .news-singel-cont .desc {
     font-size: 14px;
   }
+}
+
+.contact-us {
+  padding-top: 118px;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  .contact-us {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us {
+    padding: 40px 20px 0;
+  }
+}
+.contact-us .contact-us-cont {
+  padding: 26px;
+  box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.0392156863);
+  border: 1px solid #f1f1f1;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+}
+.contact-us .contact-us-cont .form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 100%;
+  background-color: #f1f1f1;
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  padding: 26px;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .form-grid {
+    gap: 10px;
+    padding: 15px;
+    clip-path: polygon(100% 0, 100% 94%, 50% 100%, 0 94%, 0 0);
+  }
+}
+.contact-us .contact-us-cont .form-grid .form-group {
+  position: relative;
+  width: calc(50% - 6px);
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .form-grid .form-group {
+    width: 100%;
+  }
+}
+.contact-us .contact-us-cont .form-grid .form-group .form-control,
+.contact-us .contact-us-cont .form-grid .textarea {
+  width: 100%;
+  height: 49px;
+  padding: 13px 16px 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #030303;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid rgba(69, 69, 69, 0.1);
+}
+@media (max-width: 575px) {
+  .contact-us .contact-us-cont .form-grid .form-group .form-control,
+  .contact-us .contact-us-cont .form-grid .textarea {
+    font-size: 16px;
+  }
+}
+.contact-us .contact-us-cont .form-grid .form-group .form-label {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 12px;
+  transform: translateY(-50%);
+  color: rgb(94.5, 94.5, 94.5);
+  padding: 0 8px;
+  font-size: 16px;
+  color: #000;
+  font-weight: 300;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+.contact-us .contact-us-cont .form-grid .form-group .form-control:not(:-moz-placeholder) + .form-label {
+  top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: transparent;
+  color: #454545;
+}
+.contact-us .contact-us-cont .form-grid .form-group .form-control:focus + .form-label,
+.contact-us .contact-us-cont .form-grid .form-group .form-control:not(:placeholder-shown) + .form-label {
+  top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: transparent;
+  color: #454545;
+}
+.contact-us .contact-us-cont .form-grid .form-group .form-control:not(:-moz-placeholder) {
+  border-color: #454545;
+}
+.contact-us .contact-us-cont .form-grid .form-group .form-control:focus,
+.contact-us .contact-us-cont .form-grid .form-group .form-control:not(:placeholder-shown) {
+  border-color: #454545;
+}
+.contact-us .contact-us-cont .form-grid .textarea {
+  resize: none;
+  min-height: 73px;
+}
+.contact-us .contact-us-cont .form-grid .textarea::-moz-placeholder {
+  color: #030303;
+}
+.contact-us .contact-us-cont .form-grid .textarea::placeholder {
+  color: #030303;
+}
+.contact-us .contact-us-cont .form-grid .textarea:not(:-moz-placeholder) {
+  border-color: #454545;
+}
+.contact-us .contact-us-cont .form-grid .textarea:focus,
+.contact-us .contact-us-cont .form-grid .textarea:not(:placeholder-shown) {
+  border-color: #454545;
+}
+.contact-us .contact-us-cont .form-grid .more-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px auto 0;
+  z-index: 5;
+  width: 100%;
+  max-width: 176px;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .form-grid .more-btn {
+    bottom: 10px;
+  }
+}
+.contact-us .contact-us-cont .form-grid .more-btn .btn-text {
+  font-size: 18px;
+  color: #c60f8e;
+  font-weight: 700;
+  padding: 0 34px;
+}
+@media (max-width: 991px) {
+  .contact-us .contact-us-cont .form-grid .more-btn .btn-text {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .form-grid .more-btn .btn-text {
+    font-size: 16px;
+    padding: 0;
+  }
+}
+.contact-us .contact-us-cont .form-grid .more-btn .btn-arrow {
+  width: 100%;
+  height: 20px;
+  background-color: #fff;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  max-width: 176px;
+}
+.contact-us .contact-us-cont .form-grid .more-btn .btn-arrow::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 4px;
+  top: 2px;
+  width: calc(100% - 8px);
+  height: calc(100% - 4px);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  background-color: #c60f8e;
+  transform: translateY(-1px);
+  transition: all 0.4s ease-in-out;
+}
+.contact-us .contact-us-cont .form-grid .more-btn:hover .btn-arrow {
+  transform: translateY(4px);
+}
+.contact-us .contact-us-cont .form-grid .more-btn:hover .btn-arrow::after {
+  background-color: rgb(103.1830985915, 7.8169014085, 74);
+  transform: translateY(1px);
+  height: calc(100% - 6px);
+  width: calc(100% - 20px);
+  inset-inline-start: 10px;
+}
+.contact-us .contact-us-cont .contact-menue {
+  background-color: #c60f8e;
+  clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+  padding: 4px;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .contact-menue {
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+.contact-us .contact-us-cont .contact-menue .contact-outer {
+  background-color: #fff;
+  clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+  padding: 76px 20px 36px;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .contact-menue .contact-outer {
+    padding: 40px 15px 26px;
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+.contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  max-width: 763px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont {
+    gap: 18px;
+  }
+}
+.contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont .contact-btn {
+  width: calc(50% - 6px);
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont .contact-btn {
+    width: 100%;
+  }
+}
+.contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont .contact-btn .las {
+  color: rgb(145.5, 145.5, 145.5);
+  font-size: 20px;
+  font-weight: 700;
+}
+.contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont .contact-btn .contact-type {
+  color: rgb(103.1830985915, 7.8169014085, 74);
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont .contact-btn .contact-type {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .contact-us-cont .contact-menue .contact-outer .contact-cont .contact-btn .contact-type {
+    font-size: 14px;
+  }
+}
+
+.map-ifram {
+  position: relative;
+  z-index: -1;
+  margin-top: -80px;
+  aspect-ratio: 1440/617;
+  margin-bottom: 26px;
+}
+@media (max-width: 991px) {
+  .map-ifram {
+    margin-top: 26px;
+    z-index: 1;
+  }
+}
+@media (max-width: 767px) {
+  .map-ifram {
+    aspect-ratio: 1440/1000;
+  }
+}
+.map-ifram iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }/*# sourceMappingURL=main.css.map */

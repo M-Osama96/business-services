@@ -1,7 +1,6 @@
 .breadcrumb {
   position: relative;
   z-index: 4;
-  max-width: 1440px;
   margin: auto;
   aspect-ratio: 1440/279;
   overflow: hidden;
@@ -22,7 +21,6 @@
     }
     .img-cover {
       display: flex;
-      
     }
   }
   &::after {

@@ -1,0 +1,233 @@
+.contact-us {
+  padding-top: 118px;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  @include sm {
+    padding-top: 60px;
+  }
+  @include xs {
+    padding: 40px 20px 0;
+  }
+  .contact-us-cont {
+    padding: 26px;
+    box-shadow: 0px 12px 28px 0px #0000000a;
+    border: 1px solid #f1f1f1;
+    @include xs {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      max-width: 100%;
+      background-color: #f1f1f1;
+      clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+      padding: 26px;
+
+      @include xs {
+        gap: 10px;
+        padding: 15px;
+        clip-path: polygon(100% 0, 100% 94%, 50% 100%, 0 94%, 0 0);
+      }
+      .form-group {
+        position: relative;
+        width: calc(50% - 6px);
+        @include xs {
+          width: 100%;
+        }
+      }
+      .form-group .form-control,
+      .textarea {
+        width: 100%;
+        height: 49px;
+        padding: 13px 16px 8px;
+        font-size: 16px;
+        font-weight: $weight_light;
+        color: #030303;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid rgba($color: $setting_text_color, $alpha: 0.1);
+        @include xxs {
+          font-size: 16px;
+        }
+      }
+
+      .form-group .form-label {
+        position: absolute;
+        top: 50%;
+        inset-inline-start: 12px;
+        transform: translateY(-50%);
+        color: lighten($color: $setting_text_color, $amount: 10%);
+
+        padding: 0 8px;
+        font-size: 16px;
+        color: #000;
+        font-weight: $weight_light;
+        pointer-events: none;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .form-group .form-control:focus + .form-label,
+      .form-group .form-control:not(:placeholder-shown) + .form-label {
+        top: 10px;
+        font-size: 12px;
+        font-weight: $weight_bold;
+        background-color: transparent;
+        color: $setting_text_color;
+      }
+      .form-group .form-control:focus,
+      .form-group .form-control:not(:placeholder-shown) {
+        border-color: $setting_text_color;
+      }
+
+      .textarea {
+        resize: none;
+        min-height: 73px;
+        &::placeholder {
+          color: #030303;
+        }
+      }
+      .textarea:focus,
+      .textarea:not(:placeholder-shown) {
+        border-color: $setting_text_color;
+      }
+
+      .more-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 20px auto 0;
+        z-index: 5;
+        width: 100%;
+        max-width: 176px;
+        @include xs {
+          bottom: 10px;
+        }
+        .btn-text {
+          font-size: 18px;
+          color: $setting_primary_color;
+          font-weight: $weight_bold;
+          padding: 0 34px;
+          @include sm {
+            padding: 0 15px;
+          }
+          @include xs {
+            font-size: 16px;
+            padding: 0;
+          }
+        }
+        .btn-arrow {
+          width: 100%;
+          height: 20px;
+          background-color: #fff;
+          clip-path: polygon(0 0, 50% 100%, 100% 0);
+          position: relative;
+          transition: all 0.4s ease-in-out;
+          max-width: 176px;
+          &::after {
+            content: "";
+            position: absolute;
+            inset-inline-start: 4px;
+            top: 2px;
+            width: calc(100% - 8px);
+            height: calc(100% - 4px);
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            background-color: $setting_primary_color;
+            transform: translateY(-1px);
+            transition: all 0.4s ease-in-out;
+          }
+        }
+        &:hover {
+          .btn-arrow {
+            transform: translateY(4px);
+            &::after {
+              background-color: darken($setting_primary_color, $amount: 20%);
+              transform: translateY(1px);
+              height: calc(100% - 6px);
+              width: calc(100% - 20px);
+              inset-inline-start: 10px;
+            }
+          }
+        }
+      }
+    }
+    .contact-menue {
+      background-color: $setting_primary_color;
+      clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+      padding: 4px;
+      @include xs {
+        clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+      }
+      .contact-outer {
+        background-color: #fff;
+        clip-path: polygon(50% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+        padding: 76px 20px 36px;
+        @include xs {
+          padding: 40px 15px 26px;
+          clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+        }
+        .contact-cont {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          justify-content: space-between;
+          max-width: 763px;
+          margin: auto;
+          @include xs {
+            gap: 18px;
+          }
+          .contact-btn {
+            width: calc(50% - 6px);
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            @include xs {
+              width: 100%;
+            }
+            .las {
+              color: lighten($color: $setting_text_color, $amount: 30%);
+              font-size: 20px;
+              font-weight: $weight_bold;
+            }
+            .contact-type {
+              color: darken($color: $setting_primary_color, $amount: 20%);
+              font-size: 18px;
+              font-weight: $weight_bold;
+              @include md {
+                font-size: 16px;
+              }
+              @include xs {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.map-ifram {
+  position: relative;
+  z-index: -1;
+  margin-top: -80px;
+  aspect-ratio: 1440/617;
+  margin-bottom: 26px;
+  @include sm {
+    margin-top: 26px;
+    z-index: 1;
+  }
+  @include xs {
+    aspect-ratio: 1440/1000;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
